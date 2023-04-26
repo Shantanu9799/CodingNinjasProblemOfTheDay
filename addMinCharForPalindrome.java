@@ -4,7 +4,7 @@ public class Solution {
         //Write your code here
         int n = str.length();
 		int i = 0;
-		int j = str.length()-1;
+		int j = n-1;
 		int ans = 0;
 		while(i <= j) {
 		    
