@@ -1,3 +1,4 @@
+/*
 import java.util.* ;
 import java.io.*; 
 public class Solution{
@@ -15,6 +16,29 @@ public class Solution{
 				sum /= 10;
 			}
 			sum = sumOfSum;
+		}
+		return sum;
+	}
+}
+*/
+
+//updated one
+
+import java.util.* ;
+import java.io.*; 
+public class Solution{
+	public static int specialSum(ArrayList<Integer> arr, int n ){
+        // Write your code here.
+		int sum = 0;
+		for(int i : arr) {
+			sum += i;
+		}
+		if(sum == 0) {
+			return 0;
+		}
+		sum = sum%9;
+		if(sum == 0) {
+			return 9;
 		}
 		return sum;
 	}
