@@ -10,6 +10,8 @@ bool isValid(string &str)
 	bool notWhiteSpace = true;
 	if(n>=8 && n<=15) {
 		lengthParam = true;
+	} else {
+		return false;
 	}
 	for(int i = 0; i < n; i++) {
 		if(str[i]>=65 && str[i]<=91) {
