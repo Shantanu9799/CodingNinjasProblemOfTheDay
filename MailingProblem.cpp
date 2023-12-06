@@ -9,8 +9,7 @@ int timeTakenToMail(string keyboard, string s) {
     int totalTime = 0;
     int i = 0;
     for(int lt = 0; lt < s.length(); lt++) {
-        auto it = mpp.find(s[lt]);
-        int j = it -> second;
+        int j = mpp[s[lt]];
         totalTime += abs(j - i);
         i = j;
     }
