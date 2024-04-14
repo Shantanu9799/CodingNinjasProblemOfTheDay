@@ -30,3 +30,25 @@ vector<int> nextGreater(vector<int> &arr, int n) {
     }
     return greater;
 }
+
+#include <bits/stdc++.h> 
+vector<int> nextGreaterElement(vector<int>& arr, int n){
+    // Write your code here.
+    vector<int> element(n, -1);
+    stack<int> s;
+    for(int i = n-1; i>= 0; i--) {
+        if(s.empty()) s.push(arr[i]);
+        else if(arr[i] < s.top()) {
+            element[i] = s.top();
+        } else {
+            while(!s.empty() && s.top() <= arr[i]) {
+                s.pop();
+            }
+            if(s.empty()) s.push(arr[i]);
+            else element[i] = s.top();
+        }
+        s.push(arr[i]);
+    }
+    return element;
+}
+
